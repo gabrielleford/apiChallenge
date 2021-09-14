@@ -72,7 +72,7 @@ function displayGif(gifJson) {
     console.log(randGif);
     let id = gifJson.data[randGif].id;
 
-    if (id === "3o85xmYPgg7QFaJFEk" || id === "zbaWHAJJ9ZuCc" || id === "Tur1zsvqIhm3S" || id === "mLGnUCverTQ52" || id === "l4pSX4oHQ6kGYSE2k" || id === "3o7WTLlqg2wSvmRo5i" || id === "NsIwSFHZnGtvxzOCRE") {
+    if (id === "NsIwSFHZnGtvxzOCRE") {
         let coinToss = Math.floor(Math.random() * 2);
         if (coinToss === 0) {
             randGif -= 1;
