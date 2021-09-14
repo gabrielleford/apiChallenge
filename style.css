@@ -1,5 +1,11 @@
 body {
     background-color: #f8edeb;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+h1 {
+    font-size: 7rem;
+    font-weight: 200;
 }
 
 #row, #js {
@@ -7,18 +13,41 @@ body {
     text-align: center;
 }
 
-#button {
+#description {
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    font-size: 1.5rem;
+}
+
+#sarcasm {
+    text-decoration: none;
     color: #e5989b;
+    transform: 500ms linear;
+}
+
+#sarcasm:hover {
+    color: #6d6875;
+}
+
+#js > p {
+    font-size: 1.1rem;
+}
+
+#button {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.5rem;
+    color: #e5989b;
+    box-shadow: none;
     border-color: #ffb4a2;
     background-color: #fff4f1;
     transition: 200ms linear;
 }
 
 #button:hover {
+    font-family: 'Darker Grotesque', sans-serif;
     background-color: #e5989b;
     color: white;
 }
-
 
 img {
     width: 300px;
