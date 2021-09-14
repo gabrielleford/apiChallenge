@@ -3,6 +3,10 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+#container {
+    margin-bottom: 5vh;
+}
+
 h1 {
     font-size: 7rem;
     font-weight: 200;
@@ -50,8 +54,6 @@ h1 {
 }
 
 img {
-    width: 300px;
-    height: 300px;
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 500px;
+    max-height: 500px;
 }
