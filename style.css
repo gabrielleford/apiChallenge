@@ -2,9 +2,21 @@ body {
     background-color: #f8edeb;
 }
 
+#row, #js {
+    margin-top: 5vh;
+    text-align: center;
+}
+
 #button {
-    background-color: #e5989b;
+    color: #e5989b;
     border-color: #ffb4a2;
+    background-color: #fff4f1;
+    transition: 200ms linear;
+}
+
+#button:hover {
+    background-color: #e5989b;
+    color: white;
 }
 
 
