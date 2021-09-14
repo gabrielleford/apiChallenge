@@ -31,9 +31,9 @@ function fetchGif(e) {
     randReact = Math.floor(Math.random() * 2 + 1);
     
     if (randReact === 1) {
-        gifUrl = `${getGif}?api_key=${key}&q=applause&rating=g`;
+        gifUrl = `${getGif}?api_key=${key}&q=applause`;
     } else {
-        gifUrl = `${getGif}?api_key=${key}&q=impressed&rating=g`;
+        gifUrl = `${getGif}?api_key=${key}&q=impressed`;
     }
 
     fetch(gifUrl)
@@ -72,9 +72,15 @@ function displayGif(gifJson) {
     console.log(randGif);
     let id = gifJson.data[randGif].id;
 
-    if (id === "mLGnUCverTQ52" || id === "3oz8xJcPzeRutjp2BW" || id === "d2ajvwESx7pTO") {
-        randGif += 1;
-        console.log(`New number: ${randGif}`);
+    if (id === "3o85xmYPgg7QFaJFEk" || id === "zbaWHAJJ9ZuCc" || id === "Tur1zsvqIhm3S" || id === "mLGnUCverTQ52" || id === "l4pSX4oHQ6kGYSE2k" || id === "3o7WTLlqg2wSvmRo5i" || id === "NsIwSFHZnGtvxzOCRE") {
+        let coinToss = Math.floor(Math.random() * 2);
+        if (coinToss === 0) {
+            randGif -= 1;
+            console.log(`New number: ${randGif}`);
+        } else {
+            randGif += 1;
+            console.log(`New number: ${randGif}`);
+        }
     }
     
 
