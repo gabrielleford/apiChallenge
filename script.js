@@ -15,10 +15,10 @@ let randReact;
 let randGif;
 let gifUrl;
 
-function fetchQuotes(e) {
+async function fetchQuotes(e) {
 
 
-    fetch(getQuote)
+    await fetch(getQuote)
         .then(function(response) {
             return response.json();
         })
@@ -27,7 +27,7 @@ function fetchQuotes(e) {
         })
 }
 
-function fetchGif(e) {
+async function fetchGif(e) {
     randReact = Math.floor(Math.random() * 2 + 1);
     
     if (randReact === 1) {
@@ -36,7 +36,7 @@ function fetchGif(e) {
         gifUrl = `${getGif}?api_key=${key}&q=impressed&rating=g`;
     }
 
-    fetch(gifUrl)
+    await fetch(gifUrl)
         .then(function(gifResponse) {
             return gifResponse.json();
         })
@@ -76,14 +76,11 @@ function displayGif(gifJson) {
 
     randGif = Math.floor(Math.random() * gifJson.data.length);
     let id = gifJson.data[randGif].id;
-    console.log(randGif);
 
-    if (id === "3o7WTLlqg2wSvmRo5i" || id === "NsIwSFHZnGtvxzOCRE" || id === "d2ajvwESx7pTO" || id === "3oz8xJcPzeRutjp2BW" || id === "DSUJYdg57fN4H6vbrF" || id === "55of8LXf3G78sGEWvo" || id === "Xp0J8BOr9CcPMgKVvD" || id === "mLGnUCverTQ52") {
+    if (id === "3o7WTLlqg2wSvmRo5i" || id === "NsIwSFHZnGtvxzOCRE" || id === "d2ajvwESx7pTO" || id === "3oz8xJcPzeRutjp2BW" || id === "DSUJYdg57fN4H6vbrF" || id === "55of8LXf3G78sGEWvo" || id === "Xp0J8BOr9CcPMgKVvD" || id === "mLGnUCverTQ52" || id === "URkHHQpr5x4d1KrrzI") {
         randGif += 1;
-        console.log(`New number: ${randGif}`);
     }
 
-    console.log(gifJson.data[randGif]);
     gif.src = gifJson.data[randGif].images.original.url;
     gif.style =
     'border: none; border-radius: 5px;';
