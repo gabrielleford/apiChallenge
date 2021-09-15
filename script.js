@@ -6,7 +6,6 @@ let btn = document.querySelector('button');
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let gifDiv = document.getElementById('js');
-let para = document.getElementById('para');
 
 btn.addEventListener('click', fetchQuotes);
 btn.addEventListener('click', fetchGif);
@@ -64,11 +63,13 @@ function displayQuote(json) {
     } else {
         author.innerText =`- ${qAuthor}`;
     }
+    gifDiv.style = 
+    'background-color: #fff4f1; padding: 50px; border: none; border-radius: 10px;';
 }
 
 function displayGif(gifJson) {
-    while (gifDiv.firstChild) {
-        gifDiv.removeChild(gifDiv.firstChild);
+    while (gifDiv.children[2]) {
+        gifDiv.removeChild(gifDiv.children[2]);
     }
 
     let gif = document.createElement('img');
@@ -87,6 +88,8 @@ function displayGif(gifJson) {
 
     console.log(gifJson.data[randGif]);
     gif.src = gifJson.data[randGif].images.original.url;
+    gif.style =
+    'border: none; border-radius: 5px;';
 
     gifDiv.appendChild(gif);
 }

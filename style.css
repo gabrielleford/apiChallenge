@@ -12,9 +12,20 @@ h1 {
     font-weight: 200;
 }
 
-#row, #js, #para {
-    margin-top: 5vh;
+#row, #buttonCol {
+    margin-top: 8vh;
     text-align: center;
+}
+
+#row {
+    background-color: #fff4f1;
+    
+}
+
+#js {
+    text-align: center;
+    margin-left: 12vw;
+    margin-right: 12vw;
 }
 
 #description {
@@ -33,13 +44,13 @@ h1 {
     color: #6d6875;
 }
 
-#para > p {
+#gifDiv > p {
     font-size: 1.1rem;
 }
 
 #button {
     font-family: 'Darker Grotesque', sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #e5989b;
     margin-bottom: 5vh;
     box-shadow: none;
