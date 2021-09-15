@@ -5,7 +5,9 @@ let key = 'ZBdicDFEt4oO7j5Gbi2EFNWNucggrmpq';
 let btn = document.querySelector('button');
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
-let gifDiv = document.getElementById('js');
+let qAndGDiv = document.getElementById('js');
+let gifDiv = document.getElementById('gif');
+let logoDiv = document.getElementById('logo');
 
 btn.addEventListener('click', fetchQuotes);
 btn.addEventListener('click', fetchGif);
@@ -63,16 +65,20 @@ function displayQuote(json) {
     } else {
         author.innerText =`- ${qAuthor}`;
     }
-    gifDiv.style = 
+    qAndGDiv.style = 
     'background-color: #fcf6f5; padding: 50px; border: none; border-radius: 10px;';
 }
 
 function displayGif(gifJson) {
-    while (gifDiv.children[2]) {
-        gifDiv.removeChild(gifDiv.children[2]);
+    while (gifDiv.firstChild) {
+        gifDiv.removeChild(gifDiv.firstChild);
+    }
+    while (logoDiv.firstChild) {
+        logoDiv.removeChild(logoDiv.firstChild);
     }
 
     let gif = document.createElement('img');
+    let logo = document.createElement('img');
 
     randGif = Math.floor(Math.random() * gifJson.data.length);
     let id = gifJson.data[randGif].id;
@@ -85,6 +91,9 @@ function displayGif(gifJson) {
     gif.setAttribute('class', 'img-fluid');
     gif.style =
     'border: none; border-radius: 5px;';
+    logo.src = './assets/PoweredBy_200px-White_HorizText.png';
+    logo.setAttribute('class', 'img-fluid');
 
     gifDiv.appendChild(gif);
+    logoDiv.appendChild(logo);
 }
