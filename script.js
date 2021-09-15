@@ -64,7 +64,7 @@ function displayQuote(json) {
         author.innerText =`- ${qAuthor}`;
     }
     gifDiv.style = 
-    'background-color: #fff4f1; padding: 50px; border: none; border-radius: 10px;';
+    'background-color: #fcf6f5; padding: 50px; border: none; border-radius: 10px;';
 }
 
 function displayGif(gifJson) {

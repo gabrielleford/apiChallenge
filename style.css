@@ -12,14 +12,21 @@ h1 {
     font-weight: 200;
 }
 
-#row, #buttonCol {
+#headingCol {
+    background-color: #fcf6f5;
+    background-size: 100%;
+    width: 100vw;
+    padding: 10px;
     margin-top: 8vh;
     text-align: center;
+    border: none;
+    border-radius: 15px;
 }
 
-#row {
-    background-color: #fff4f1;
-    
+#buttonCol {
+    margin-bottom: -25px;
+    text-align: center;
+    margin-top: 3vh;
 }
 
 #js {
