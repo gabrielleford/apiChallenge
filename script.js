@@ -75,16 +75,13 @@ function displayGif(gifJson) {
     let gif = document.createElement('img');
 
     randGif = Math.floor(Math.random() * gifJson.data.length);
-    console.log(randGif);
     let id = gifJson.data[randGif].id;
+    console.log(randGif);
 
-    if (id === "3o7WTLlqg2wSvmRo5i" || id === "NsIwSFHZnGtvxzOCRE" || id === "d2ajvwESx7pTO" || id === "3oz8xJcPzeRutjp2BW" || id === "DSUJYdg57fN4H6vbrF") {
+    if (id === "3o7WTLlqg2wSvmRo5i" || id === "NsIwSFHZnGtvxzOCRE" || id === "d2ajvwESx7pTO" || id === "3oz8xJcPzeRutjp2BW" || id === "DSUJYdg57fN4H6vbrF" || id === "55of8LXf3G78sGEWvo" || id === "Xp0J8BOr9CcPMgKVvD" || id === "mLGnUCverTQ52") {
         randGif += 1;
         console.log(`New number: ${randGif}`);
     }
-
-
-    
 
     console.log(gifJson.data[randGif]);
     gif.src = gifJson.data[randGif].images.original.url;
