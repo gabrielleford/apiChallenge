@@ -82,6 +82,7 @@ function displayGif(gifJson) {
     }
 
     gif.src = gifJson.data[randGif].images.original.url;
+    gif.setAttribute('class', 'img-fluid');
     gif.style =
     'border: none; border-radius: 5px;';
 

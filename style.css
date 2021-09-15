@@ -30,8 +30,8 @@ h1 {
 
 #js {
     text-align: center;
-    margin-left: 12vw;
-    margin-right: 12vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 #description {
@@ -42,7 +42,6 @@ h1 {
 }
 
 #sarcasm {
-    text-decoration: none;
     color: #e5989b;
     transform: 500ms linear;
 }
