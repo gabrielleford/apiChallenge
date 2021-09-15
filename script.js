@@ -6,6 +6,7 @@ let btn = document.querySelector('button');
 let quote = document.getElementById('quote');
 let author = document.getElementById('author');
 let gifDiv = document.getElementById('js');
+let para = document.getElementById('para');
 
 btn.addEventListener('click', fetchQuotes);
 btn.addEventListener('click', fetchGif);
@@ -47,15 +48,14 @@ function fetchGif(e) {
 
 function displayQuote(json) {
     randNum = Math.floor(Math.random() * json.length);
+    elimAuthor = json[randNum].author;
 
-    if (json.author === "Donald Trump") {
+    if (elimAuthor === "Donald Trump") {
         randNum += 1;
-        console.log(`New Author number ${randNum}`);
     }
 
     let qText = json[randNum].text;
     let qAuthor = json[randNum].author;
-    console.log(qAuthor);
 
     quote.innerText = qText;
 
@@ -77,10 +77,10 @@ function displayGif(gifJson) {
     console.log(randGif);
     let id = gifJson.data[randGif].id;
 
-    // if (id === ) {
-    //     randGif += 1;
-    //     console.log(`New number: ${randGif}`);
-    // }
+    if (id === "3o7WTLlqg2wSvmRo5i" || id === "NsIwSFHZnGtvxzOCRE" || id === "d2ajvwESx7pTO" || id === "3oz8xJcPzeRutjp2BW" || id === "DSUJYdg57fN4H6vbrF") {
+        randGif += 1;
+        console.log(`New number: ${randGif}`);
+    }
 
 
     
