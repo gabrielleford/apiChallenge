@@ -31,9 +31,9 @@ function fetchGif(e) {
     randReact = Math.floor(Math.random() * 2 + 1);
     
     if (randReact === 1) {
-        gifUrl = `${getGif}?api_key=${key}&q=applause`;
+        gifUrl = `${getGif}?api_key=${key}&q=applause&rating=g`;
     } else {
-        gifUrl = `${getGif}?api_key=${key}&q=impressed`;
+        gifUrl = `${getGif}?api_key=${key}&q=impressed&rating=g`;
     }
 
     fetch(gifUrl)
@@ -41,7 +41,6 @@ function fetchGif(e) {
             return gifResponse.json();
         })
         .then(function(gifJson) {
-            console.log(gifJson.data);
             displayGif(gifJson);
         })
 }
@@ -49,8 +48,14 @@ function fetchGif(e) {
 function displayQuote(json) {
     randNum = Math.floor(Math.random() * json.length);
 
+    if (json.author === "Donald Trump") {
+        randNum += 1;
+        console.log(`New Author number ${randNum}`);
+    }
+
     let qText = json[randNum].text;
     let qAuthor = json[randNum].author;
+    console.log(qAuthor);
 
     quote.innerText = qText;
 
@@ -62,8 +67,8 @@ function displayQuote(json) {
 }
 
 function displayGif(gifJson) {
-    while (gifDiv.children[2]) {
-        gifDiv.removeChild(gifDiv.children[2]);
+    while (gifDiv.firstChild) {
+        gifDiv.removeChild(gifDiv.firstChild);
     }
 
     let gif = document.createElement('img');
@@ -72,16 +77,12 @@ function displayGif(gifJson) {
     console.log(randGif);
     let id = gifJson.data[randGif].id;
 
-    if (id === "NsIwSFHZnGtvxzOCRE") {
-        let coinToss = Math.floor(Math.random() * 2);
-        if (coinToss === 0) {
-            randGif -= 1;
-            console.log(`New number: ${randGif}`);
-        } else {
-            randGif += 1;
-            console.log(`New number: ${randGif}`);
-        }
-    }
+    // if (id === ) {
+    //     randGif += 1;
+    //     console.log(`New number: ${randGif}`);
+    // }
+
+
     
 
     console.log(gifJson.data[randGif]);

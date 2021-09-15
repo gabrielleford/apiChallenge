@@ -12,7 +12,7 @@ h1 {
     font-weight: 200;
 }
 
-#row, #js {
+#row, #js, #para {
     margin-top: 5vh;
     text-align: center;
 }
@@ -33,7 +33,7 @@ h1 {
     color: #6d6875;
 }
 
-#js > p {
+#para > p {
     font-size: 1.1rem;
 }
 
@@ -41,6 +41,7 @@ h1 {
     font-family: 'Darker Grotesque', sans-serif;
     font-size: 1.5rem;
     color: #e5989b;
+    margin-bottom: 5vh;
     box-shadow: none;
     border-color: #ffb4a2;
     background-color: #fff4f1;
